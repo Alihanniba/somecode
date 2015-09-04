@@ -2,12 +2,13 @@
 ffmpeg-2.4.1.tar.bz2
 last_x264.tar.bz2
 
-auto:        **(if no permissions input sudo)**
+auto:        (if no permissions input sudo)
 1.
 libx264 need yasm,so first install yasm
 apt-get install yasm
 
-2. then libx264
+2.
+then libx264
 aptitude install libx264-dev 
 
 manual:
