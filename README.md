@@ -3,6 +3,6 @@
 
 
 
+-------------
 
-
-================![花一个无所谓的年纪去浪荡](/home/alihanniba/图片/fuck.jpg  "花一个无所谓的年纪去浪荡") 
+![花一个无所谓的年纪去浪荡](https://github.com/alihanniba/master/blob/master/images/fuck.jpg  "花一个无所谓的年纪去浪荡")
