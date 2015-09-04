@@ -1,4 +1,4 @@
-[FFmpeg安装](https://github.com/alihanniba/master/blob/master/FFmpeg/ffmpeg.md) 
+[FFmpeg Instal](https://github.com/alihanniba/master/blob/master/FFmpeg/ffmpeg.md) 
 
 
 -------------
