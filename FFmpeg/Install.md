@@ -59,9 +59,8 @@ aptitude install libxfixes-dev
 ##install ffmpeg
 
 1.
- unzip ffmpeg
- ---
- 
+unzip ffmpeg
+---
 tar -xjvf ffmpeg-2.4.1.tar.bz2  
 
 2.
