@@ -58,13 +58,11 @@ aptitude install libxfixes-dev
 
 ##install ffmpeg
 
-1.
-unzip ffmpeg
+1.unzip ffmpeg
 ---
 tar -xjvf ffmpeg-2.4.1.tar.bz2  
 
-2.
-compile an  install
+2.compile an  install
 ---
 ./configure --prefix=/usr/local/ffmpeg --enable-gpl --enable-version3 --enable-nonfree --enable-postproc --enable-pthreads --enable-libfaac --enable-libmp3lame --enable-libtheora --enable-libx264 --enable-libxvid --enable-x11grab --enable-libvorbis  
 
