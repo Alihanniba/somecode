@@ -1,28 +1,27 @@
-#下载FFMPEG和libx264的包
+# Install FFMPEG and libx264 install package
 ffmpeg-2.4.1.tar.bz2
 last_x264.tar.bz2
 
-自动:        **(无权限给sudo)**
+auto:        **(if no permissions input sudo)**
 1.
-libx264需要yasm,所以先安装yasm
+libx264 need yasm,so first install yasm
 apt-get install yasm
 
-2.
-然后安装libx264
+2. then libx264
 aptitude install libx264-dev 
 
-手动:
+manual:
 1.
-解压缩libx264
+unzip  libx264
 tar -xjvf last_x264.tar.bz2 
 
 2.
-安装libx264
+install libx264
 ./configure --enable-shared --enable-pic  
 make  
 make install  
 
-**安装ffmpeg依赖包**
+**install ffmpeg  Depend on the package**
 
 1.libfaac
 aptitude install libfaac-dev
@@ -45,14 +44,14 @@ aptitude install libxext-dev
 7.libxfixes
 aptitude install libxfixes-dev 
 
-**依赖包安装完后,安装ffmpeg**
+*install ffmpeg**
 
 1.
-先解压缩ffmpeg
+ unzip ffmpeg
 tar -xjvf ffmpeg-2.4.1.tar.bz2  
 
 2.
-编译安装
+compile an  install
 ./configure --prefix=/usr/local/ffmpeg --enable-gpl --enable-version3 --enable-nonfree --enable-postproc --enable-pthreads --enable-libfaac --enable-libmp3lame --enable-libtheora --enable-libx264 --enable-libxvid --enable-x11grab --enable-libvorbis  
 
 3.over
