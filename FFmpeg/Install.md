@@ -1,7 +1,8 @@
 # Install FFMPEG and libx264 install package
 ===
-ffmpeg-2.4.1.tar.bz2
-last_x264.tar.bz2
+###ffmpeg-2.4.1.tar.bz2
+---
+###last_x264.tar.bz2
 
 auto:        (if no permissions input sudo)
 ---
@@ -25,7 +26,7 @@ install libx264
 make  
 make install  
 
-**install ffmpeg  Depend on the package**
+##install ffmpeg  Depend on the package
 
 1.libfaac
 ---
@@ -55,7 +56,7 @@ aptitude install libxext-dev
 ---
 aptitude install libxfixes-dev 
 
-*install ffmpeg**
+##install ffmpeg
 
 1.
  unzip ffmpeg
