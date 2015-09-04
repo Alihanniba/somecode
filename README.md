@@ -1,4 +1,4 @@
-[FFmpeg Instal](https://github.com/alihanniba/master/blob/master/FFmpeg/ffmpeg.md) 
+[FFmpeg Install](https://github.com/alihanniba/master/blob/master/FFmpeg/Install.md) 
 -----
 [FFmpeg  Merge Video](https://github.com/alihanniba/master/blob/master/FFmpeg/merge.md) 
 ---
