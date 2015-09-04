@@ -7,7 +7,7 @@
 ###in ubuntu.sh.
 ###wifi id :cofface
 ###password:coffce123
-##==you can change wifi id==
-##==you can change password==
-##==last,./ubuntu.sh wlan0 ppp0 cofface123==   
-#### ==password=coffface123==
+##`you can change wifi id=`
+##`you can change password`
+##`last,./ubuntu.sh wlan0 ppp0 cofface123`
+#### `password=coffface123`
