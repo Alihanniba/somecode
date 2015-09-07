@@ -4,6 +4,8 @@
 ---
 [Install 360wifi for ubuntu](https://github.com/alihanniba/master/blob/master/Install360wifi.md) 
 ---
+[js-get-url-param](https://github.com/alihanniba/master/blob/master/js-get-url-param.md) 
+---
 ![花一个无所谓的年纪去浪荡](https://github.com/alihanniba/master/blob/master/images/fuck.jpg  "花一个无所谓的年纪去浪荡")
 ---
 
