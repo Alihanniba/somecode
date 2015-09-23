@@ -1,0 +1,35 @@
+<script>
+		 function toUtf8(str) {    
+                                var out, i, len, c;    
+                                out = "";    
+                                len = str && str.length;    
+                                for(i = 0; i < len; i++) {    
+                                        c = str.charCodeAt(i);    
+                                        if ((c >= 0x0001) && (c <= 0x007F)) {    
+                                            out += str.charAt(i);    
+                                        } else if (c > 0x07FF) {    
+                                            out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));    
+                                            out += String.fromCharCode(0x80 | ((c >>  6) & 0x3F));    
+                                            out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));    
+                                        } else {    
+                                            out += String.fromCharCode(0xC0 | ((c >>  6) & 0x1F));    
+                                            out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));    
+                                        }    
+                                }    
+                                return out;    
+                        } 
+
+                     $('#two-images').qrcode({
+                        width: 256,
+                        height: 256,
+                         text:"MECARD:TEL:"+toUtf8(data.vcardInfo.mobile)+";URL:"+toUtf8(data.vcardInfo.url)+";EMAIL:"+ toUtf8(data.vcardInfo.email)+";NOTE:"+toUtf8(data.vcardInfo.tel)+";N:"+ toUtf8(data.vcardInfo.name)+";ORG:"+toUtf8(data.vcardInfo.company)+";TIL:"+toUtf8(data.vcardInfo.job)+";ADR:"+toUtf8(data.vcardInfo.address)+";"}
+                    );
+                        var img = document.createElement('img');
+                        img.setAttribute('src', document.getElementById('two-images').children[0].toDataURL("image/png"));
+                        img.setAttribute('style', 'background: #fff; padding: 20px;');
+                        document.getElementById('two-images').appendChild(img);
+                        document.getElementById('two-images').children[0].setAttribute('style', 'display: none;');
+
+
+
+</script>
