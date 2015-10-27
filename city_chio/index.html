@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="全国四级联动城市选择器">
+    <meta name="description" content="全国四级联动城市选择器">
+    <script src="area.js"></script>
+    <script src="jquery.min.js"></script>
+    <title>全国四级联动城市选择器</title>
+    
+</head>
+<body class="index-body">
+   
+                <select name="s_area" id="s_area"></select>
+                <select id="s_province"  name="s_province"></select>  
+                <select id="s_city"  name="s_city" ></select>  
+                <select id="s_county"  name="s_county"></select>
+    <script type="text/javascript">
+        var Gid  = document.getElementById ;
+        var showArea = function(){
+            Gid('show').innerHTML = "<h3>区域"+Gid('s_area').value+"- 省" + Gid('s_province').value + " - 市" +    
+            Gid('s_city').value + " - 县/区" + 
+            Gid('s_county').value + "</h3>"
+                                    }
+        // Gid('s_county').setAttribute('onchange','showArea()');
+    
+</script>
+</body>
+</html>
