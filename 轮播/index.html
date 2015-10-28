@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播插件DEMO</title>
+	<script src="jquery.min.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#contains{
+			height: 600px;
+			width: 600px;
+			border:3px solid red;
+			overflow-y: hidden;
+			position: relative;
+		}
+		#list{
+			height: 600px;
+			width: 3600px;
+			position: absolute;
+			z-index: 1;
+		}
+		#contains img{
+			height: 600px;
+			width: 600px;
+			float: left;
+		}
+		#button{
+			height: 20px;
+			width: 100px;
+			border:1px solid red;
+			z-index: 2;
+			color: #fff;
+			position: absolute;
+			bottom: 20px;
+			left: 250px;
+		}
+		#button span{
+			width: 20px;
+			display: inline-block;
+			cursor: pointer;
+			text-align: center;
+		}
+		.nav{
+			height: 50px;
+			width: 50px;
+			border:1px solid red;
+			color:#fff;
+			z-index: 3;
+			position: absolute;
+			cursor: pointer;
+		}
+		#shang{
+			top:275px;
+			left: 50px;
+		}
+		#xia{
+			top:275px;
+			left:500px;
+		}
+		.on{
+			background:red;
+		}
+	</style>
+
+	<script>
+		window.onload = function(){
+			var contain = document.getElementById('contains');
+			var list    = document.getElementById('list');
+			var button  = document.getElementById('button').getElementsByTagName('span');
+			var shang   = document.getElementById('shang');
+			var xia     = document.getElementById('xia');
+			var index   = 1;
+			var timer;
+
+
+			
+			function showButton(){
+				for (var i = 0; i < button.length; i++) {
+					if(button[i].className=='on'){
+						button[i].className='';
+						break;
+					}
+				}
+				button[index-1].className = 'on';
+			}
+
+
+
+			function animate(offset){
+				var newLeft = parseInt(list.style.left)+offset;
+				var time = 300;   //位移总时间
+				var inteval = 10;  //位移间隔时间
+				var speed = offset/(time/inteval);   //每次位移量
+				// animated = true;
+
+
+				function go(){
+					if((speed < 0 && parseInt(list.style.left) > newLeft) || (speed > 0 && parseInt(list.style.left) < newLeft)){
+						list.style.left = parseInt(list.style.left) + speed + 'px';
+						setTimeout(go , inteval);   // 递归调用
+					}else{
+						list.style.left = newLeft+'px';
+						if(newLeft > -600){
+							list.style.left = -2400+'px';
+						}
+						if(newLeft < -2400){
+							list.style.left = -600+'px';
+						}
+						// animated = false;
+					}
+				}
+
+				go();
+			}
+
+			function play(){
+				timer = setInterval(function(){
+					xia.onclick();
+				},3000);
+			}
+
+			function stop(){
+				clearInterval(timer);
+			}
+			xia.onclick = function(){
+				if(index == 4){
+					index =1;
+				}else{
+					index += 1;
+				}
+				showButton();
+				// if(!animated){
+					animate(-600);
+				// }
+			}
+			shang.onclick = function(){
+				if(index == 1){
+					index = 4;
+				}else{
+					index -= 1;
+				}
+				showButton();
+				// if(!animated){
+					animate(600);
+				// }
+			}
+
+			for (var i = 0; i < button.length; i++) {
+				button[i].onclick = function(){
+					if(this.className=='on'){
+						return;
+					}
+					var myIndex = parseInt(this.getAttribute("index"));
+					var offset = -600*(myIndex-index);
+					// if(!animated){
+						animate(offset);
+					// }
+					index = myIndex;
+					showButton();
+				}
+			}
+			contain.onmouseover = stop;
+			contain.onmouseout = play;
+			play();
+		}
+
+
+	</script>
+</head>
+<body>
+	<div id="contains">
+		<div id="list" style="left:-600px;" >
+			<img src="images/baby.jpg" alt="">
+			<img src="images/baby2.jpg"  alt="">
+			<img src="images/babyq.jpg"  alt="">
+			<img src="images/me.jpg"  alt="">
+			<img src="images/baby.jpg"  alt="">
+			<img src="images/baby2.jpg"  alt="">
+		</div>
+		<div id="button">
+			<span index="1" class="on">1</span>
+			<span index="2">2</span>
+			<span index="3">3</span>
+			<span index="4">4</span>
+		</div>
+		<span id="shang" class="nav">上一个</span>
+		<span id="xia" class="nav">下一个</span>
+	</div>
+</body>
+</html>
