@@ -1,0 +1,36 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.box{
+	width: 100%;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+#btn{
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	display: block;
+	height: 100px;
+	width: 100px;
+	color: #000;
+	font-size: 40px;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
