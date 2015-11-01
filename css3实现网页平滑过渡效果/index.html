@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>CSS3实现网页平滑过渡效果</title>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Slab:400,700">
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="container">
+		<div class="st_container">
+			<!--nav start -->
+			<input type="radio" name="radio_set" checked="checked" id="st_control_1">
+			<a href="#st_panel_1">第一个页面</a>
+			<input type="radio" name="radio_set"  id="st_control_2">
+			<a href="#st_panel_2">第二个页面</a>
+			<input type="radio" name="radio_set"  id="st_control_3">
+			<a href="#st_panel_3">第三个页面</a>
+			<input type="radio" name="radio_set"  id="st_control_4">
+			<a href="#st_panel_4">第四个页面</a>
+			<input type="radio" name="radio_set"  id="st_control_5">
+			<a href="#st_panel_5">第五个页面</a>
+			<!--nav end content start -->
+			<div class="st_scroll">
+				<section class="st_panel" id="st_panel_1">
+					<div class="st_desc" data-icon="H"></div>
+					<h2>标题1</h2>
+					<p>第一个页面内容</p>
+				</section>
+				<section class="st_panel st_color" id="st_panel_2">
+					<div class="st_desc" data-icon="2"></div>
+					<h2>标题2</h2>
+					<p>第二个页面内容</p>
+				</section>
+				<section class="st_panel" id="st_panel_3">
+					<div class="st_desc" data-icon="B"></div>
+					<h2>标题3</h2>
+					<p>第三个页面内容</p>
+				</section>
+				<section class="st_panel st_color" id="st_panel_4">
+					<div class="st_desc" data-icon="x"></div>
+					<h2>标题4</h2>
+					<p>第四个页面内容</p>
+				</section>
+				<section class="st_panel" id="st_panel_5">
+					<div class="st_desc" data-icon="C"></div>
+					<h2>标题5</h2>
+					<p>第五个页面内容</p>
+				</section>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
