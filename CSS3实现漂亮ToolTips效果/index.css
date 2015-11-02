@@ -1,0 +1,68 @@
+/**
+ * Global
+ */
+html{
+	width: 100%;
+	height: 100%;
+	/* 屏幕旋转时不会改变字体大小 */
+	-webkit-text-size-adjust:none;
+	-moz-text-size-adjust:none;
+	-o-text-size-adjust:none;
+	-ms-text-size-adjust:none;
+	text-size-adjust:none;
+}
+body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background: #47c9af;
+	color:#74777b;
+	font-weight: 300;
+	font-size: 1.5em;
+	font-family: "Raleway","Arail";
+}
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a:link,a:visited,a:focus{
+	text-decoration: none;
+	outline: none;
+}
+*,*:after,*:before{
+	/*display: block;*/
+	/*content:"";*/
+}
+*:clear{
+	clear:both;
+}
+
+/* Navgaitor */
+.nav{
+	width: 800px;
+	height: 300px;
+	padding-top: 200px;
+	margin: 0 auto;
+}
+.nav li{
+	display: inline-block;
+	margin: 0.1em;
+}
+.tooltip{
+	display: inline-block;
+	font-weight: 700;
+	color:rgba(0,0,0,0.3);
+	padding: 0.15em 0.25em 0 0;
+}
+
+
+
+
+
+
+
+
+
+
