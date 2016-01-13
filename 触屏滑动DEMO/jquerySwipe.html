@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>页面滑动事件</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="./jquery-2.1.4.min.js"></script>
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+        #contain{
+            /*width: 414px;*/
+            height: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+        #box{
+            width: 1242px;
+            position: absolute;
+            left: 0px;
+            z-index: 1;
+        }
+        #box div{
+            /*width: 414px;*/
+            display:inline-block;
+            float: left;
+            padding: 0;
+            margin: 0;
+
+        }
+        #box div p{
+            height: 30px;
+        }
+        #div1{
+            background: red;
+        }
+        #div2{
+            background: blue;
+        }
+        #div3{
+            background: yellow;
+        }
+        ::-webkit-scrollbar{width:0px}
+    </style>
+</head>
+<body>
+<div id="contain">
+    <div id="box">
+        <div id="div1">
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+        </div>
+        <div id="div2">
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第一个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+            <p>第二个页面</p>
+        </div>
+        <div id="div3">
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+            <p>第三个页面</p>
+        </div>
+    </div>
+</div>
+    <!-- // <script type="text/javascript" src="./touch.js"></script> -->
+    <script src="./iscroll.js"></script>
+    <script>
+        // window.onload = function(){
+        //     document.getElementById("contain").style.width = document.body.offsetWidth + 'px';
+        //     document.getElementById("div1").style.width = document.body.offsetWidth + 'px';
+        //     document.getElementById("div2").style.width = document.body.offsetWidth + 'px';
+        //     document.getElementById("div3").style.width = document.body.offsetWidth + 'px';
+        //     touch.swipestart('body',function(e){
+        //         // console.log("开始滑动");
+        //         // console.log(e.screenY);
+        //         console.log(document.body.offsetWidth);
+        //         // alert(document.body.offsetWidth);
+        //     });
+        //     touch.swipemove('body',function(e){
+        //         // console.log("滑动中");
+        //         // console.log(e.displacementX);
+        //         displacementX = e.displacementX;
+        //         var offsetLeft = parseInt(document.getElementById('box').style.left);
+        //         if(displacementX > 100 && index > 1 && offsetLeft < 0){
+        //             console.log("左超过100");
+        //             if(index === 3){
+        //                 document.getElementById('box').style.left = - document.body.offsetWidth + 'px';
+        //             }
+        //             if(index === 2){
+        //                 document.getElementById('box').style.left = 0;
+        //             }
+        //         }
+        //         if(displacementX < -100 && index < 3){
+        //             console.log("右超过100");
+        //             console.log(document.body.offsetWidth);
+        //             document.getElementById('box').style.left = -(document.body.offsetWidth * index) + 'px';
+        //         }
+        //     });
+        //     touch.swipeend('body',function(e){
+        //         console.log("结束滑动");
+        //         console.log(document.getElementById('box').style.left);
+        //         if(displacementX < -100 && index < 3){
+        //             index = index + 1;
+        //             console.log(index);
+        //         }
+        //         if(displacementX > 100 && index > 1){
+        //             index = index - 1;
+        //             console.log(index);
+        //         }
+        //     });
+        // }
+    </script>
+
+    <script>
+        var index = 1;
+        var startPointX;
+        var endPointX;
+        var distance;
+        var index;
+        var box = document.getElementById('box');
+        var boxLeft;
+        var boxStartLeft;
+        var show = 1;
+        box.ontouchstart = function(e){
+            e.preventDefault();
+            var touch = e.touches[0];
+            startPointX = touch.clientX;
+            boxStartLeft = parseInt(box.style.left)?parseInt(box.style.left):0;
+            console.log(boxStartLeft);
+        }
+        box.ontouchmove = function(e){
+            e.preventDefault();
+        }
+        box.ontouchend = function(e){
+            var touch = e.changedTouches[0];
+            endPointX = touch.clientX;
+            distance = endPointX - startPointX;
+            // alert(distance);
+            // var offsetLeft = parseInt(box.style.left?box.style.left:0);
+            if(distance > 100 && index > 1){
+                boxLeft = boxStartLeft + 414;
+                console.log(boxLeft);
+                show = index - 1;
+                console.log(show);
+
+                if(show > 0 && show < 3){
+                    console.log("左超过100");
+                    if(index === 3){
+                        box.style.left = - document.body.offsetWidth + 'px';
+                    }
+                    if(index === 2){
+                        box.style.left = 0 + 'px';
+                    }
+                    // animate(414);
+
+                    index = index - 1;
+                }
+            }
+            if(distance < -100 && index < 3){
+                boxLeft = boxStartLeft - 414;
+                console.log(boxLeft);
+                show = index + 1;
+                console.log(show);
+                console.log("右超过100");
+                box.style.left = -(document.body.offsetWidth * index) + 'px';
+                // animate(-414);
+
+                index = index + 1;
+            }
+        };
+        function animate(offset){
+            console.log(boxStartLeft);
+            console.log(offset);
+
+            var newLeft = parseInt(boxStartLeft)+offset;
+            var time = 300;   //位移总时间
+            var inteval = 10;  //位移间隔时间
+            var speed = offset/(time/inteval);   //每次位移量
+            // animated = true;
+            function go(){
+                // if((speed < 0 && parseInt(boxStartLeft) > newLeft) || (speed > 0 && parseInt(boxStartLeft) < newLeft)){
+                //     boxStartLeft = parseInt(boxStartLeft) + speed + 'px';
+                //     console.log(boxStartLeft);
+                //     setTimeout(go , inteval);   // 递归调用
+                // }
+                box.style.left = -(414 * index) + 'px';
+            }
+            go();
+        }
+        window.onload = function(){
+            document.getElementById("contain").style.width = document.body.offsetWidth + 'px';
+            document.getElementById("div1").style.width = document.body.offsetWidth + 'px';
+            document.getElementById("div2").style.width = document.body.offsetWidth + 'px';
+            document.getElementById("div3").style.width = document.body.offsetWidth + 'px';
+            myScroll = new IScroll('#contain', {
+                mouseWheel: true,
+                scrollbars: true,
+                click: true
+            });
+
+            box.ontouchstart();
+            box.ontouchmove();
+            box.ontouchend();
+        }
+  </script>
+</body>
+</html>

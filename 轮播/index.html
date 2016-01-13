@@ -100,6 +100,7 @@
 				function go(){
 					if((speed < 0 && parseInt(list.style.left) > newLeft) || (speed > 0 && parseInt(list.style.left) < newLeft)){
 						list.style.left = parseInt(list.style.left) + speed + 'px';
+						console.log(list.style.left);
 						setTimeout(go , inteval);   // 递归调用
 					}else{
 						list.style.left = newLeft+'px';
@@ -148,23 +149,23 @@
 				// }
 			}
 
-			for (var i = 0; i < button.length; i++) {
-				button[i].onclick = function(){
-					if(this.className=='on'){
-						return;
-					}
-					var myIndex = parseInt(this.getAttribute("index"));
-					var offset = -600*(myIndex-index);
-					// if(!animated){
-						animate(offset);
-					// }
-					index = myIndex;
-					showButton();
-				}
-			}
-			contain.onmouseover = stop;
-			contain.onmouseout = play;
-			play();
+			// for (var i = 0; i < button.length; i++) {
+			// 	button[i].onclick = function(){
+			// 		if(this.className=='on'){
+			// 			return;
+			// 		}
+			// 		var myIndex = parseInt(this.getAttribute("index"));
+			// 		var offset = -600*(myIndex-index);
+			// 		// if(!animated){
+			// 			animate(offset);
+			// 		// }
+			// 		index = myIndex;
+			// 		showButton();
+			// 	}
+			// }
+			// contain.onmouseover = stop;
+			// contain.onmouseout = play;
+			// play();
 		}
 
 
