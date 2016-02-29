@@ -25,7 +25,7 @@ var utils = (function () {
 		return false;
 	})();
 
-	function _prefixStyle (style) {
+	function _prefixStyle (style) {removeData('data name')
 		if ( _vendor === false ) return false;
 		if ( _vendor === '' ) return style;
 		return _vendor + style.charAt(0).toUpperCase() + style.substr(1);
