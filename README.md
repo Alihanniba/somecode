@@ -16,6 +16,8 @@
 ---
 [全国区域城市选择四级联动插件](https://github.com/alihanniba/My-Code-Base/tree/master/city_chio)
 ---
+[文件上传与下载](https://github.com/alihanniba/My-Code-Base/tree/master/fileUploadAndDownload)
+---
 [css3实现网页平滑过渡效果](https://github.com/alihanniba/My-Code-Base/tree/master/css3%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E5%B9%B3%E6%BB%91%E8%BF%87%E6%B8%A1%E6%95%88%E6%9E%9C)
 ---
 [微信开发者接口](https://github.com/alihanniba/My-Code-Base/tree/master/wechat_development)
