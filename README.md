@@ -1,5 +1,9 @@
 [sublime text插件tmpl的模板配置](https://github.com/alihanniba/My-Code-Base/tree/master/sublime%20text%E6%8F%92%E4%BB%B6tmpl%E7%9A%84%E6%A8%A1%E6%9D%BF%E9%85%8D%E7%BD%AE)
 ---
+[PHP、JS验证银行卡号与身份证号类](https://github.com/alihanniba/My-Code-Base/tree/master/PHP%E3%80%81JS%E9%AA%8C%E8%AF%81%E9%93%B6%E8%A1%8C%E5%8D%A1%E5%8F%B7%E4%B8%8E%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7%E7%B1%BB)
+---
+[个人常用正则表达式集锦](https://github.com/alihanniba/My-Code-Base/blob/master/%E4%B8%AA%E4%BA%BA%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%9B%86%E9%94%A6/javascript%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%AA%E4%BA%BA%E9%9B%86%E9%94%A6)
+---
 [Linux（Ubuntu、CentOS）下开放 MySQL 服务远程访问](https://github.com/alihanniba/My-Code-Base/blob/master/Linux%EF%BC%88Ubuntu%E3%80%81CentOS%EF%BC%89%E4%B8%8B%E5%BC%80%E6%94%BE%20MySQL%20%E6%9C%8D%E5%8A%A1%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/Linux%EF%BC%88Ubuntu%E3%80%81CentOS%EF%BC%89%E4%B8%8B%E5%BC%80%E6%94%BE%20MySQL%20%E6%9C%8D%E5%8A%A1%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE.md)
 ---
 [PHP+MySQL分页原理实现](https://github.com/alihanniba/My-Code-Base/tree/master/PHP%2BMySQL%E5%88%86%E9%A1%B5%E5%8E%9F%E7%90%86%E5%AE%9E%E7%8E%B0)

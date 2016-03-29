@@ -5,25 +5,25 @@
  * @date    2016-03-29 17:06:45
  * @version \www.alihanniba.com\
  **/
-//检车姓名
+//检查姓名
 var checkName = function(name) {
     var reg = /^[\u4e00-\u9fa5]{2,10}$/;
     return reg.test(name);
 };
 
-//检车邮箱
+//检查邮箱
 var myreg_email = function(email) {
     var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
     return reg.test(email);
 };
 
-//检车手机号
+//检查手机号
 var checkTel = function(tel) {
     var reg = /^0?1[34578][0-9]\d{8}$/;
     return reg.test(tel);
 };
 
-//检车url
+//检查url
 var urlencode = function(str) {
     str = str.toString();
     return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').
