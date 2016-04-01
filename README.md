@@ -10,7 +10,7 @@
 ---
 [IDE-install-for-Ubuntu14.04](https://github.com/alihanniba/IDE-install-for-Ubuntu14.04)
 ---
-[js调用android的方法]()
+[js调用android的方法](https://github.com/alihanniba/My-Code-Base/blob/master/js%E8%B0%83%E7%94%A8android%E7%9A%84%E6%96%B9%E6%B3%95.js)
 ---
 [CSS3实现漂亮ToolTips效果](https://github.com/alihanniba/My-Code-Base/tree/master/CSS3%E5%AE%9E%E7%8E%B0%E6%BC%82%E4%BA%AEToolTips%E6%95%88%E6%9E%9C)
 ---
