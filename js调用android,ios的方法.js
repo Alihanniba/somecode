@@ -1,17 +1,18 @@
-//Ios 與andriod判斷
+/**
+ * @authors \alihanniba\
+ * @email   \alihanniba@gmail.com\
+ * @date    2016-04-01 16:43:43
+ * @version \www.alihanniba.com\
+ */
 
 
-
-//第一种
-var userAgent = window.navigator.userAgent.toLowerCase();
-	if (userAgent.match(/iphone/i) || userAgent.match(/ipad/i) || userAgent.match(/ipod/i)) {
-
-	} else if (userAgent.match(/android/i)) {
-
-	} else {
-
-	}
-
+//WebViewFunc是类名
+//getMaterCode是方法名
+//chip_code是参数
+/**
+ * 点击时必须写在一个函数内,否则不会生效
+ */
+window.WebViewFunc.getMasterCode(chip_code);
 
 //第二种
 
@@ -33,10 +34,10 @@ var Terminal = {
 
 if(Terminal.platform.android){
 
+    window.ADBannerJavaInterface.onAdBannerClick($(this).attr("data-url"));
+
 } else if(Terminal.platform.iPhone){
 
+    window.location.href = "objc://pushToAdPage::/" + $(this).attr("data-url");
+
 }
-
-
-
-
