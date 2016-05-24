@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>拖拽上传</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="csrf-token" content=""/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <div id="drop_zone" style="width: 500px;height: 500px;margin: 0 auto;border: 1px solid red;">Drop files here</div>
+    <ul id="list"></ul>
+
+    <script>
+        // 必须阻止dragenter和dragover事件的默认行为，这样才能触发 drop 事件
+        function handleFileSelect(evt) {
+          evt.stopPropagation();
+          evt.preventDefault();
+
+          var files = evt.dataTransfer.files; // 文件对象
+
+          // 处理多文件
+          var output = [];
+          for (var i = 0, f; f = files[i]; i++) {
+            output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+              f.size, ' bytes, last modified: ',
+              f.lastModifiedDate.toLocaleDateString(), '</li>');
+          }
+          // 显示文件信息
+          document.getElementById('list').innerHTML = output.join('');
+        }
+
+        function handleDragOver(evt) {
+          evt.stopPropagation();
+          evt.preventDefault();
+          evt.dataTransfer.dropEffect = 'copy';
+        }
+
+        // Setup the dnd listeners.
+        var dropZone = document.getElementById('drop_zone');
+        dropZone.addEventListener('dragover', handleDragOver, false);
+        dropZone.addEventListener('drop', handleFileSelect, false);
+
+        //监听事件jquery
+        // $('#drop_zone').on('dragover', function(event) {
+        //     event.preventDefault();
+        //     event.stopPropagation();
+        //     handleDragOver(event.originalEvent);
+        // });
+
+        // $('#drop_zone').on('drop', function(event) {
+        //     event.preventDefault();
+        //     event.stopPropagation();
+        //     handleFileSelect(event.originalEvent);
+        // });
+
+    </script>
+</body>
+</html>

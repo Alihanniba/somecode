@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>上传到服务器</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="csrf-token" content=""/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <input type="file" id="img_input" accept="image/*">
+    <label for="img_input"></label>
+    <div class="preview_box"></div>
+    <script>
+        var form_data = new FormData();
+        var file_data = $('#img_input').prop('files')[0];
+
+        //把上传的数据放入form_data
+        form_data.append('user', 'alihanniba');
+        form_data.append('img', file_data);
+
+        $.ajax({
+            url: '',
+            type: 'POST',
+            dataType: 'json',
+            data: {param1: 'value1'},
+        })
+        .done(function() {
+            console.log("success");
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
+
+    </script>
+</body>
+</html>

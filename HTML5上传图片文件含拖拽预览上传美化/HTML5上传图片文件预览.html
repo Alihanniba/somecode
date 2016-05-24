@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>HTML5上传图片文件预览</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="csrf-token" content=""/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        .preview_box {
+            height: 500px;
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid red;
+        }
+        .preview {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="img_input" accept="image/*">
+    <label for="img_input"></label>
+    <div class="preview_box"></div>
+    <script>
+        $('#img_input').change(function(event) {
+            /* Act on the event */
+            var file = event.target.files[0];  //获取图片资源
+
+            //只选择图片
+            if(!file.type.match('image.*')) {
+                return false;
+            }
+
+            var reader = new FileReader();
+
+            reader.readAsDataURL(file);  //读取文件
+
+            //渲染文件
+            reader.onload = function(arg) {
+                var img = '<img class="preview" src="'+ arg.target.result +'" alt="preview">';
+                $('.preview_box').empty().append(img);
+            }
+        });
+    </script>
+</body>
+</html>

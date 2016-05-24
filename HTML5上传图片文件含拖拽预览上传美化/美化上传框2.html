@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>美化上传框2</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="csrf-token" content=""/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        #img_input2 {
+            display: none;
+        }
+        #img_label2 {
+            background-color: #f2d547;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 10px;
+        }
+        #preview_box2 img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <input id="img_input2" type="file" accept="image/*"/>
+    <label for="img_input2" id="img_label2">选择文件
+        <i class="fa fa-plus fa-lg"></i>
+    </label>
+    <div id="preview_box2"></div>
+
+    <script>
+        $("#img_input2").on("change", function(e) {
+
+            var file = e.target.files[0]; //获取图片资源
+
+            // 只选择图片文件
+            if (!file.type.match('image.*')) {
+                return false;
+            }
+
+            var reader = new FileReader();
+
+            reader.readAsDataURL(file); // 读取文件
+
+            // 渲染文件
+            reader.onload = function(arg) {
+
+                var img = '<img class="preview" src="' + arg.target.result + '" alt="preview"/>';
+                        $("#preview_box2").empty().append(img);
+            }
+        });
+    </script>
+</body>
+</html>
