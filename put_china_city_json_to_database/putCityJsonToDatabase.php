@@ -26,11 +26,9 @@ class PutCityJsonToDatabase extends AnotherClass {
 
         $json = file_get_contents($filename);
 
-        $json = json_decode($json,true);
+        $json = json_decode($json, true);
 
         $content = $json['children'];
-
-        // return $content;
 
         foreach ($content as $key => $value) {
             $Ptext = $value['text'];
@@ -41,22 +39,41 @@ class PutCityJsonToDatabase extends AnotherClass {
                 $Pchildren = $value['children'] ? $value['children'] : '';
 
                 $last_insert_Pid = DB::table('sdk_message_put_province')->insertGetId(['text'=>$Ptext]);
+                if (sizeof($Pchildren) !== 0) {
+                    foreach ($Pchildren as $Pk => $Pv) {
+                        $Ctext = $Pv['text'];
 
-                foreach ($Pchildren as $Pk => $Pv) {
-                    $Ctext = $Pv['text'];
+                        if (count($Pv) < 3) {
 
-                    if (count($Pv) < 3) {
+                            $last_insert_Cid = DB::table('sdk_message_put_city')->insertGetId(['text'=>$Ctext,'pid'=>$last_insert_Pid]);
 
-                        $last_insert_Cid = DB::table('sdk_message_put_city')->insertGetId(['text'=>$Ctext,'pid'=>$last_insert_Pid]);
+                        } else {
+                            $Cchildren = $Pv['children'] ? $Pv['children'] : '';
 
-                    } else {
-                        $Cchildren = $Pv['children'] ? $Pv['children'] : '';
+                            $last_insert_Cid = DB::table('sdk_message_put_city')->insertGetId(['text'=>$Ctext,'pid'=>$last_insert_Pid]);
+                            
+                            if (sizeof($Cchildren) !== 0) {
+                                foreach ($Cchildren as $Ck => $Cv) {
+                                    $Atext = $Cv['text'];
+                                    if (count($Cv) < 3) {
+                                        DB::table('sdk_message_put_area')->insert(['text'=>$Atext,'cid'=>$last_insert_Cid]);
+                                    } else {
 
-                        $last_insert_Cid = DB::table('sdk_message_put_city')->insertGetId(['text'=>$Ctext,'pid'=>$last_insert_Pid]);
-                    
-                        foreach ($Cchildren as $Ck => $Cv) {
-                            $Atext = $Cv['text'];
-                            DB::table('sdk_message_put_area')->insert(['text'=>$Atext,'cid'=>$last_insert_Cid]);
+                                        $Dchildren = $Cv['children'] ? $Cv['children'] : '';
+
+                                        $last_insert_Aid = DB::table('sdk_message_put_area')->insertGetId(['text'=>$Atext,'cid'=>$last_insert_Cid]);
+
+                                        if (sizeof($Dchildren) !== 0) {
+                                            foreach ($Dchildren as $Dk => $Dv) {
+                                                $Ztext = $Dv['text'];
+                                                if (count($Dv) < 3) {
+                                                    DB::table('sdk_message_put_zone')->insert(['text'=>$Ztext,'aid'=>$last_insert_Aid]);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
