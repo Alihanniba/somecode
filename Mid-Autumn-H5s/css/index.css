@@ -1,0 +1,360 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background:#efeff4;
+}
+#bg_one{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#add_address{
+	/*display: none;*/
+	height: 455px;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	margin-top: -228px;
+}
+#add_address img{
+	height: 100%;
+	width: 100%;
+}
+#add_address #kown{
+
+	width: 77%;
+	margin:auto;
+	margin-top: -400px;
+}
+#add_address #parents{
+	width: 77%;
+	margin:auto;
+	margin-top: 10px;
+}
+#add_address #foreign_land{
+	font-size: 20px;
+	color: #4a4a4a;
+}
+#add_address #question{
+	font-size: 14px;
+	color: #9b9b9b;
+}
+#add_address label{
+	font-size: 14px;
+	color: #999999;
+}
+#add_address input{
+	font-size: 15px;
+	color: #333333;
+	width: 100%;
+	height: 44px;
+	margin-top: 10.5px;
+	text-indent: 10px;
+	border-radius: 5px;
+	outline: none;
+}
+#add_address button{
+	width: 77%;
+	height: 44px;
+	border-radius: 4.5px;
+	background: #4a90e2;
+	color: #fff;
+	margin: auto;
+	margin-top: 70.5px;
+	border: none;
+	font-size: 18.7px;
+	/*margin:auto;*/
+
+}
+#parents{
+	margin-top: 29.5px;
+}
+#distance{
+	display: none;
+	height: 95%;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	margin-top: 2%;
+}
+#distance  #chrysanthemum{
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+	margin-left: -25px;
+	z-index: 9999;
+	border: 1px solid #fff;
+	display: none;
+}
+#distance #card2{
+	height: 100%;
+	width: 100%;
+	display: inline;
+}
+#distance p{
+	font-size: 18px;
+}
+#distance label{
+	font-size: 48px;
+	color: #4a90e2;
+	outline: none;
+}
+#distance #guide{
+	height: 24%;
+	width: 42%;
+	border: 1px solid red;
+	margin: 0 auto;
+}
+#distance #guide img{
+	height: 100%;
+	width: 100%;
+}
+#distance button{
+	width: 270px;
+	height: 44px;
+	border-radius: 4.5px;
+	background: #4a90e2;
+	color: #fff;
+	margin-top: 6%;
+	outline: none;
+	border: none;
+	font-size: 18.7px;	
+}
+#distance #create_t{
+	height:100%;
+	width:100%;
+	/*border:1px solid red ;*/
+	/*background: url(../images/share.png);*/
+	transform:translateY(-100%);
+	-ms-transform:translateY(-100%);	
+	-moz-transform:translateY(-100%); 	
+	-webkit-transform:translateY(-100%); 
+	-o-transform:translateY(-100%);	
+}
+#distance #km{
+	padding-top:6%;
+}
+#distance #reunion{
+	margin-top: 1%;
+}
+#distance #number{
+	display: block;
+	margin-top: 1%;
+}
+#distance #moon_cake{
+	margin-top: 1%;
+}
+#distance #guide{
+	margin-top: 2%;
+}
+#distance #remarks{
+	margin-top: 2%;
+}
+
+#lucky{
+
+	height: 100%;
+	width: 320px;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	margin-left: -160px;
+	font-size: 18px;
+	color: #999999;
+}
+#lucky label{
+	font-size: 48px;
+	color: #4a90e2;
+	display: block;
+	margin-top: 4%;
+}
+
+#lucky #lucky_code{
+	margin-top: 30%;
+}
+#lucky #copy_code{
+	margin-top: 4%;
+}
+#lucky #load_app{
+	margin-top: 4%;
+}
+#lucky button{
+	width: 320px;
+	height: 44px;
+	border-radius: 4.5px;
+	background: #4a90e2;
+	color: #fff;
+	border: none;
+	font-size: 18.7px;
+	margin-top: 40%
+}
+
+#mid_autumn{
+	display: none;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+#mid_autumn #bg2{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#mid_autumn #shareAnd{
+	height: 90%;
+	width: 320px;
+	position: absolute;
+	text-align: center;
+	left: 50%;
+	margin-left: -160px;
+	margin-top: 5%;
+}
+#mid_autumn  #third_bg{
+	z-index: 9999;
+	height: 194px;
+	width: 125px;
+	position: absolute;
+	top: 15px;
+	left: 1px;
+}
+#mid_autumn  #third_bg img{
+	height: 100%;
+	width: 100%;
+}
+
+#mid_autumn #your_img{
+	height: 37%;
+	width: 66%;
+	margin:0 auto;
+	margin-top: 6%;
+	border: 1px solid #fff;
+}
+#mid_autumn #your_img img{
+	height: 100%;
+	width: 100%;
+}
+#mid_autumn p{
+	font-size: 15px;
+	color: #fff;
+}
+#mid_autumn label{
+	font-size: 24px;
+	color: #fdcc10;
+}
+
+#mid_autumn #local{
+	margin-top: 4%;
+}
+#mid_autumn #yuebing{
+	margin-top: 4%;
+}
+#mid_autumn #first{
+	margin-top: 4%;
+}
+#mid_autumn #second{
+	margin-top: 4%;
+}
+#mid_autumn #third{
+	margin-top: 4%;
+}
+#mid_autumn  button{
+	height: 44px;
+	width: 320px;
+	border-radius: 4.5px;
+	background: #4a90e2;
+	font-size: 18.7px;
+	color: #fff;
+	outline: none;
+	border:none;
+	margin-top: 8%;
+}
+
+
+#shadow{
+	display: none;
+
+	height: 100%;
+	width: 100%;
+	background:#000;
+	opacity: 0.7;
+}
+#shadow img{
+	height: 100%;
+	width: 100%;
+	z-index: 9999;
+}
+
+#guide_page {
+	display: none;
+	height: 100%;
+	width: 100%;
+}
+#guide_page  img{
+	display: block;
+	position: absolute;
+	top: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+}
+#lucky_co{
+	display: none;
+	height: 100%;
+	width: 100%;
+}
+
+#lucky_co #ticket_bg{
+	height: 100%;
+	width: 100%;
+}
+
+#lucky_co #copy_co{
+	height: 192px;
+	width: 270px;
+	position: absolute;
+	left: 50%;
+	margin-left: -135px;
+	bottom: 160px;
+}
+
+#lucky_co #copy_co img{
+	height: 100%;
+	width: 100%;
+}
+#lucky_co #load_now{
+	height: 146px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+
+}
+#lucky_co #load_now img{
+	height: 100%;
+	width: 100%;
+}
+
+#lucky_co p{
+	height: 44px;
+	width: 320px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -160px;
+	line-height: 44px;
+	text-align: center;
+	font-size: 36px;
+}
+

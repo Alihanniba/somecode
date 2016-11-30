@@ -1,0 +1,100 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+}
+body{
+	background: url(../images/b-g-2.png);
+}
+#bg{
+	height: 194px;
+	width: 125px;
+	position: absolute;
+	top: 21px;
+	left: 13px;
+}
+#bg img{
+	height: 100%;
+	width: 100%;
+}
+#remarks{
+	width: 260px;
+	height: 180px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -90px;
+	margin-left: -130px;
+	text-align: center;
+
+}
+
+#remarks p{
+	font-size: 20px;
+	line-height: 36px;
+	color: #fff;
+}
+#intro{
+	height: 54px;
+	width: 248px;
+	font-size: 12px;
+	line-height: 18px;
+	color: #71a6cf;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	margin-left: -124px;
+	text-align: center;
+}
+#bbg input{
+	height: 44px;
+	width: 320px;
+	border-radius: 5px;
+	position: absolute;
+	border:none;
+	outline:none;
+	top: 80%;
+	left: 50%;
+	margin-left: -160px;
+	text-indent: 10px;
+	font-size: 12px;
+	color: #ccc;
+	background: #fff;
+}
+#bbg  button{
+	height: 44px;
+	width: 320px;
+	border-radius: 4.5px;
+	position: absolute;
+	background: #4a90e2;
+	border:none;
+	outline:none;
+	top: 90%;
+	left: 50%;
+	margin-left: -160px;
+	font-size: 18.7px;
+	color: #fff;
+}
+#shadom{
+	display: none;
+	background: #000;
+	height:100%;
+	width:100%;
+	opacity:	0.63;
+}
+.img{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+}
+
+
+
